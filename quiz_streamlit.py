@@ -68,6 +68,7 @@ st.set_page_config(page_title="Quiz Culture Générale", layout="centered")
 if "current_question_index" not in st.session_state:
     st.session_state.current_question_index = 0
     st.session_state.score = 0
+    st.session_state.submitted = False
 
 # Obtenir l'index actuel de la question
 current_question_index = st.session_state.current_question_index
@@ -85,15 +86,19 @@ if current_question_index < len(questions):
     selected_option = st.radio("Choisissez une réponse :", question["options"], key=current_question_index)
 
     # Bouton pour valider
-    if st.button("Valider"):
+    if st.button("Valider") and not st.session_state.submitted:
+        st.session_state.submitted = True
         if selected_option == question["answer"]:
             st.session_state.score += 1
             st.success("Correct ! 🎉")
         else:
             st.error(f"Faux ! La bonne réponse était : {question['answer']}")
 
-        # Mettre à jour l'index de la question
+    # Bouton pour passer à la question suivante
+    if st.session_state.submitted and st.button("Suivant"):
         st.session_state.current_question_index += 1
+        st.session_state.submitted = False
+        st.experimental_rerun()
 else:
     # Fin du quiz
     st.subheader("Quiz Terminé !")
@@ -104,3 +109,5 @@ else:
     if st.button("Rejouer"):
         st.session_state.current_question_index = 0
         st.session_state.score = 0
+        st.session_state.submitted = False
+        st.experimental_rerun()
