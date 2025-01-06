@@ -64,35 +64,37 @@ questions = generate_questions()
 # Configuration de la page
 st.set_page_config(page_title="Quiz Culture Générale", layout="centered")
 
-# Session State pour suivre la progression
+# Initialisation de l'état
 if "current_question_index" not in st.session_state:
     st.session_state.current_question_index = 0
     st.session_state.score = 0
 
+# Obtenir l'index actuel de la question
+current_question_index = st.session_state.current_question_index
+
 # Afficher le titre
 st.title("Quiz Culture Générale - Gestion")
 
-# Récupérer la question actuelle
-current_question_index = st.session_state.current_question_index
-
 if current_question_index < len(questions):
+    # Question actuelle
     question = questions[current_question_index]
     st.subheader(f"Question {current_question_index + 1}/{len(questions)}")
     st.write(question["question"])
 
     # Options de réponse
-    selected_option = st.radio("Choisissez une réponse :", question["options"])
+    selected_option = st.radio("Choisissez une réponse :", question["options"], key=current_question_index)
 
+    # Bouton pour valider
     if st.button("Valider"):
         if selected_option == question["answer"]:
             st.session_state.score += 1
             st.success("Correct ! 🎉")
         else:
             st.error(f"Faux ! La bonne réponse était : {question['answer']}")
-        
-        # Passer à la question suivante
+
+        # Mettre à jour l'index de la question
         st.session_state.current_question_index += 1
-        st.experimental_rerun()
+        st.experimental_rerun()  # Relancer l'application pour la prochaine question
 else:
     # Fin du quiz
     st.subheader("Quiz Terminé !")
@@ -104,4 +106,3 @@ else:
         st.session_state.current_question_index = 0
         st.session_state.score = 0
         st.experimental_rerun()
-
