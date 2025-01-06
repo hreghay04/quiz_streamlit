@@ -68,7 +68,7 @@ st.set_page_config(page_title="Quiz Culture Générale", layout="centered")
 if "current_question_index" not in st.session_state:
     st.session_state.current_question_index = 0
     st.session_state.score = 0
-    st.session_state.answer_validated = False
+    st.session_state.validated = False  # Indique si la réponse a été validée
 
 # Obtenir l'index actuel de la question
 current_question_index = st.session_state.current_question_index
@@ -86,9 +86,9 @@ if current_question_index < len(questions):
     selected_option = st.radio("Choisissez une réponse :", question["options"], key=f"question_{current_question_index}")
 
     # Bouton pour valider la réponse
-    if not st.session_state.answer_validated:
+    if not st.session_state.validated:
         if st.button("Valider", key=f"validate_{current_question_index}"):
-            st.session_state.answer_validated = True
+            st.session_state.validated = True
             if selected_option == question["answer"]:
                 st.session_state.score += 1
                 st.success("Correct ! 🎉")
@@ -96,10 +96,10 @@ if current_question_index < len(questions):
                 st.error(f"Faux ! La bonne réponse était : {question['answer']}")
 
     # Bouton pour passer à la question suivante
-    if st.session_state.answer_validated:
+    if st.session_state.validated:
         if st.button("Suivant", key=f"next_{current_question_index}"):
             st.session_state.current_question_index += 1
-            st.session_state.answer_validated = False
+            st.session_state.validated = False  # Réinitialiser la validation
 else:
     # Fin du quiz
     st.subheader("Quiz Terminé !")
@@ -110,4 +110,4 @@ else:
     if st.button("Rejouer"):
         st.session_state.current_question_index = 0
         st.session_state.score = 0
-        st.session_state.answer_validated = False
+        st.session_state.validated = False
