@@ -94,7 +94,6 @@ if current_question_index < len(questions):
 
         # Mettre à jour l'index de la question
         st.session_state.current_question_index += 1
-        st.experimental_rerun()  # Relancer l'application pour la prochaine question
 else:
     # Fin du quiz
     st.subheader("Quiz Terminé !")
@@ -105,4 +104,3 @@ else:
     if st.button("Rejouer"):
         st.session_state.current_question_index = 0
         st.session_state.score = 0
-        st.experimental_rerun()
