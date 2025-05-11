@@ -93,25 +93,27 @@ if st.session_state.current_q < len(questions):
     # Choix de la réponse
     selected = st.radio("Choisissez une réponse :", q["options"], key=f"opt_{st.session_state.current_q}")
 
-    # Validation
-    if not st.session_state.validated and st.button("Valider", key=f"val_{st.session_state.current_q}"):
-        st.session_state.validated = True
-        if selected == q["answer"]:
-            st.session_state.score += 1
-            st.success("Correct ! 🎉")
-        else:
-            st.error(f"Faux ! La bonne réponse était : **{q['answer']}**")
-
-    # Après validation, affichage des détails et bouton suivant
-    if st.session_state.validated:
-        st.markdown(f"- **Votre réponse :** {selected}")
-        st.markdown(f"- **Bonne réponse :** {q['answer']}")
-        if st.button("Suivant", key=f"next_{st.session_state.current_q}"):
-            # Passage à la question suivante
+    # Bouton de validation et passage à la suite
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("Valider", key=f"val_{st.session_state.current_q}"):
+            st.session_state.validated = True
+            st.session_state.last_selected = selected
+            if selected == q["answer"]:
+                st.session_state.score += 1
+                st.success("Correct ! 🎉")
+            else:
+                st.error(f"Faux ! La bonne réponse était : **{q['answer']}**")
+    with col2:
+        if st.session_state.validated and st.button("Suivant", key=f"next_{st.session_state.current_q}"):
             st.session_state.current_q += 1
             st.session_state.validated = False
-            # Forcer le rafraîchissement pour afficher directement la question suivante
-            st.experimental_rerun()
+            # Pas besoin de rerun explicite, Streamlit rafraîchit automatiquement
+
+    # Après validation, affichage de la réponse précédente
+    if st.session_state.validated:
+        st.markdown(f"- **Votre réponse :** {st.session_state.last_selected}")
+        st.markdown(f"- **Bonne réponse :** {q['answer']}")
 
 else:
     # Fin du quiz
@@ -119,8 +121,10 @@ else:
     st.success(f"Quiz terminé ! Votre score : {st.session_state.score} / {len(questions)} 🎯")
     if st.button("Rejouer"):
         # Réinitialisation complète
-        del st.session_state.questions
-        st.experimental_rerun()
+        for key in ["questions", "current_q", "score", "validated", "last_selected"]:
+            if key in st.session_state:
+                del st.session_state[key]
+        # Nouvelle exécution déclenchée par interaction
 
 # Style CSS basique pour l'interface
 st.markdown(
@@ -130,3 +134,4 @@ st.markdown(
     header { background-color: #4CAF50 !important; }
     </style>
     """, unsafe_allow_html=True)
+
