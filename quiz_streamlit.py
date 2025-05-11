@@ -1,8 +1,9 @@
 import streamlit as st
 import random
 
-# Fonction pour mélanger les questions
-def generate_questions():
+# Fonction pour générer et mélanger les questions et options
+@st.cache_data
+def load_questions():
     questions = [
         {
             "question": "Quelle est la définition de la RSE ?",
@@ -53,61 +54,97 @@ def generate_questions():
                 "La productivité des salariés"
             ],
             "answer": "La capacité à générer des profits"
-        },
+        }
     ]
+
+    # Mélanger l'ordre des questions et des options
     random.shuffle(questions)
+    for q in questions:
+        random.shuffle(q["options"])
     return questions
 
-# Charger les questions
-questions = generate_questions()
+# Chargement des questions
+questions = load_questions()
 
 # Configuration de la page
-st.set_page_config(page_title="Quiz Culture Générale", layout="centered")
+st.set_page_config(
+    page_title="Quiz Culture Générale",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
-# Initialisation de l'état
-if "current_question_index" not in st.session_state:
-    st.session_state.current_question_index = 0
+# Initialisation de l'état de la session
+if "current_q" not in st.session_state:
+    st.session_state.current_q = 0
     st.session_state.score = 0
-    st.session_state.validated = False  # Indique si la réponse a été validée
+    st.session_state.validated = False
+    st.session_state.selected = None
 
-# Obtenir l'index actuel de la question
-current_question_index = st.session_state.current_question_index
+# Affichage dans la sidebar
+st.sidebar.title("Progression du Quiz")
+st.sidebar.write(f"Question {st.session_state.current_q + 1} / {len(questions)}")
+progress = (st.session_state.current_q + 1) / len(questions)
+st.sidebar.progress(progress)
+st.sidebar.write(f"Score actuel: **{st.session_state.score}**")
 
-# Afficher le titre
-st.title("Quiz Culture Générale - Gestion")
+# Titre principal
+st.title("🧠 Quiz Culture Générale - Gestion")
 
-if current_question_index < len(questions):
-    # Question actuelle
-    question = questions[current_question_index]
-    st.subheader(f"Question {current_question_index + 1}/{len(questions)}")
-    st.write(question["question"])
+# Affichage de la question ou résultat final
+if st.session_state.current_q < len(questions):
+    q = questions[st.session_state.current_q]
+    st.subheader(q["question"])
 
-    # Options de réponse
-    selected_option = st.radio("Choisissez une réponse :", question["options"], key=f"question_{current_question_index}")
-
-    # Bouton pour valider la réponse
+    # Affichage des options avant validation
     if not st.session_state.validated:
-        if st.button("Valider", key=f"validate_{current_question_index}"):
+        st.session_state.selected = st.radio(
+            "Choisissez une réponse :", q["options"], key=f"opt_{st.session_state.current_q}"
+        )
+
+        if st.button("Valider", key=f"val_{st.session_state.current_q}"):
             st.session_state.validated = True
-            if selected_option == question["answer"]:
+            if st.session_state.selected == q["answer"]:
                 st.session_state.score += 1
                 st.success("Correct ! 🎉")
             else:
-                st.error(f"Faux ! La bonne réponse était : {question['answer']}")
+                st.error(f"Faux ! La bonne réponse était : **{q['answer']}**")
 
-    # Bouton pour passer à la question suivante
-    if st.session_state.validated:
-        if st.button("Suivant", key=f"next_{current_question_index}"):
-            st.session_state.current_question_index += 1
-            st.session_state.validated = False  # Réinitialiser la validation
+    # Après validation, proposition de passer à la suite
+    else:
+        st.markdown(f"**Votre réponse :** {st.session_state.selected}")
+        st.markdown(f"**Bonne réponse :** {q['answer']}")
+        if st.button("Suivant", key=f"next_{st.session_state.current_q}"):
+            # Passer à la question suivante
+            st.session_state.current_q += 1
+            st.session_state.validated = False
+            st.session_state.selected = None
+
 else:
     # Fin du quiz
-    st.subheader("Quiz Terminé !")
-    st.write(f"Votre score final est : {st.session_state.score}/{len(questions)} 🎯")
     st.balloons()
-
-    # Bouton pour rejouer
+    st.success(f"Quiz terminé ! Votre score : {st.session_state.score} / {len(questions)} 🎯")
     if st.button("Rejouer"):
-        st.session_state.current_question_index = 0
+        # Réinitialiser l'état
+        questions = load_questions()
+        st.session_state.current_q = 0
         st.session_state.score = 0
         st.session_state.validated = False
+        st.session_state.selected = None
+
+# Style custom (CSS) pour meilleure interaction
+st.markdown(
+    """
+<style>
+body {
+    background-color: #f0f2f6;
+}
+.stApp {
+    max-width: 800px;
+    margin: auto;
+}
+button[kind="primary"] {
+    background: #4CAF50;
+    color: white;
+}
+</style>
+""", unsafe_allow_html=True)
