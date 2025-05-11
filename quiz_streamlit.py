@@ -30,117 +30,73 @@ if "questions" not in st.session_state:
 
 questions = st.session_state.questions
 
-# Page Config and Theme
+# Page Config
 st.set_page_config(
     page_title="Quiz Culture Générale",
     layout="centered",
     initial_sidebar_state="collapsed"
 )
 
-# Custom CSS for card layout and styling
+# CSS Styling
 st.markdown("""
 <style>
-    .card {
-        background: #ffffff;
-        padding: 2rem;
-        margin: 2rem auto;
-        border-radius: 1rem;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        max-width: 700px;
-    }
-    .question {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-bottom: 1.5rem;
-    }
-    .option-label {
-        font-size: 1.2rem;
-    }
-    .btn-validate {
-        background-color: #008cff;
-        color: white;
-        padding: 0.75rem 1.5rem;
-        border: none;
-        border-radius: 0.5rem;
-        cursor: pointer;
-        font-size: 1rem;
-        margin-right: 1rem;
-    }
-    .btn-validate:hover {
-        background-color: #006bb3;
-    }
-    .btn-next {
-        background-color: #4CAF50;
-        color: white;
-        padding: 0.75rem 1.5rem;
-        border: none;
-        border-radius: 0.5rem;
-        cursor: pointer;
-        font-size: 1rem;
-    }
-    .btn-next:hover {
-        background-color: #388e3c;
-    }
-    .sidebar .stProgress > div > div {
-        background-color: #008cff;
-    }
-    .sidebar-text {
-        font-size: 1rem;
-        font-weight: 500;
-    }
-    </style>
+.card { background:#fff; padding:2rem; margin:2rem auto; border-radius:1rem; box-shadow:0 4px 20px rgba(0,0,0,0.1); max-width:700px; }
+.question { font-size:1.5rem; font-weight:600; margin-bottom:1rem; }
+.stRadio > label { font-size:1.2rem; }
+button[data-baseweb="button"] { font-size:1rem; border-radius:0.5rem; padding:0.75rem 1.5rem; }
+button[kind="primary"] { background-color:#008cff; color:#fff; }
+button[kind="primary"]:hover { background-color:#006bb3; }
+button[kind="secondary"] { background-color:#4CAF50; color:#fff; }
+button[kind="secondary"]:hover { background-color:#388e3c; }
+.sidebar .stProgress > div > div { background-color:#008cff; }
+</style>
 """, unsafe_allow_html=True)
 
-# Sidebar: progress and score
+# Sidebar
 with st.sidebar:
     st.markdown("### Progression")
     if st.session_state.current_q < len(questions):
         display_q = st.session_state.current_q + 1
-        progress_val = display_q / len(questions)
+        prog = display_q / len(questions)
     else:
         display_q = len(questions)
-        progress_val = 1.0
-    st.markdown(f"<p class='sidebar-text'>Question <b>{display_q}</b> / {len(questions)}</p>", unsafe_allow_html=True)
-    st.progress(progress_val)
-    st.markdown(f"<p class='sidebar-text'>Score : <b>{st.session_state.score}</b></p>", unsafe_allow_html=True)
+        prog = 1.0
+    st.markdown(f"**Question {display_q} / {len(questions)}**")
+    st.progress(prog)
+    st.markdown(f"**Score : {st.session_state.score}**")
 
-# Main quiz card
+# Main card
 st.markdown("<div class='card'>", unsafe_allow_html=True)
 
 if st.session_state.current_q < len(questions):
     q = questions[st.session_state.current_q]
     st.markdown(f"<div class='question'>{q['question']}</div>", unsafe_allow_html=True)
-    selected = st.radio("", q['options'], key=f"opt_{st.session_state.current_q}")
+    selected = st.radio("Choisissez une réponse :", q['options'], key=f"opt_{st.session_state.current_q}")
 
-    # Buttons
-    col1, col2 = st.columns([1,1], gap='small')
+    col1, col2 = st.columns(2)
     with col1:
-        if st.button("Valider", key=f"val_{st.session_state.current_q}", help="Valider votre réponse"):
+        if st.button("Valider", key=f"val_{st.session_state.current_q}"):
             st.session_state.validated = True
             st.session_state.last_selected = selected
             if selected == q['answer']:
-                st.success("Correct ! 🎉")
                 st.session_state.score += 1
+                st.success("Correct ! 🎉")
             else:
-                st.error(f"Faux ! La bonne réponse était : **{q['answer']}**")
+                st.error(f"Faux ! La bonne réponse : {q['answer']}")
     with col2:
         if st.session_state.validated and st.button("Suivant", key=f"next_{st.session_state.current_q}"):
             st.session_state.current_q += 1
             st.session_state.validated = False
-            st.experimental_rerun()
+            st.session_state.pop(f"opt_{st.session_state.current_q - 1}", None)
 
-    # After validation
     if st.session_state.validated:
         st.markdown(f"**Votre réponse :** {st.session_state.last_selected}")
         st.markdown(f"**Bonne réponse :** {q['answer']}")
-
 else:
     st.balloons()
-    st.success(f"Quiz terminé ! Votre score : {st.session_state.score} / {len(questions)} 🎯")
+    st.success(f"Quiz terminé ! Score : {st.session_state.score} / {len(questions)} 🎯")
     if st.button("Rejouer"):
-        for key in ["questions", "current_q", "score", "validated", "last_selected"]:
-            if key in st.session_state:
-                del st.session_state[key]
-        st.experimental_rerun()
+        for key in ["questions","current_q","score","validated","last_selected"]:
+            if key in st.session_state: del st.session_state[key]
 
 st.markdown("</div>", unsafe_allow_html=True)
