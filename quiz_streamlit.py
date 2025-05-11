@@ -34,8 +34,11 @@ questions = st.session_state.questions
 st.set_page_config(
     page_title="Quiz Culture Générale",
     layout="centered",
-    initial_sidebar_state="collapsed"
+    initial_sidebar_state="expanded"
 )
+
+# Titre de l'application
+st.title("🧠 Quiz Culture Générale - Gestion")
 
 # CSS Styling
 st.markdown("""
