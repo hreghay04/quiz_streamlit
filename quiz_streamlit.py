@@ -110,6 +110,8 @@ if st.session_state.current_q < len(questions):
             # Passage à la question suivante
             st.session_state.current_q += 1
             st.session_state.validated = False
+            # Forcer le rafraîchissement pour afficher directement la question suivante
+            st.experimental_rerun()
 
 else:
     # Fin du quiz
