@@ -1,0 +1,1066 @@
+{
+    "Internet": [
+        {
+            "question": "Qu'est-ce que l'ARPANET et en quelle année a-t-il vu le jour ?",
+            "options": [
+                "Un réseau de recherche universitaire en 1965",
+                "Un réseau militaire américain de 1969",
+                "Le protocole de routage TCP/IP en 1983",
+                "Un service de noms de domaine en 1985"
+            ],
+            "answer": "Un réseau militaire américain de 1969"
+        },
+        {
+            "question": "En quelle année Internet est-il devenu opérationnel avec l'adoption du protocole TCP/IP ?",
+            "options": [
+                "1973",
+                "1983",
+                "1993",
+                "2003"
+            ],
+            "answer": "1983"
+        },
+        {
+            "question": "Quel est l'avantage principal d'IPv6 par rapport à IPv4 ?",
+            "options": [
+                "Une meilleure qualité de service (QoS)",
+                "Un espace d'adressage beaucoup plus grand",
+                "Un chiffrement obligatoire",
+                "Une compatibilité complète avec IPv4"
+            ],
+            "answer": "Un espace d'adressage beaucoup plus grand"
+        },
+        {
+            "question": "Qu'est-ce que la commutation de paquets ?",
+            "options": [
+                "La segmentation et le routage de données en petits paquets",
+                "Le cryptage de paquets de données",
+                "Le protocole d'établissement de session TCP",
+                "Une méthode de transfert de fichiers par FTP"
+            ],
+            "answer": "La segmentation et le routage de données en petits paquets"
+        },
+        {
+            "question": "Parmi ces topologies réseau, laquelle présente un point central unique ?",
+            "options": [
+                "Maillée",
+                "En anneau",
+                "En étoile",
+                "En arbre"
+            ],
+            "answer": "En étoile"
+        },
+        {
+            "question": "Quel service traduit un nom de domaine en adresse IP ?",
+            "options": [
+                "DHCP",
+                "DNS",
+                "FTP",
+                "SMTP"
+            ],
+            "answer": "DNS"
+        },
+        {
+            "question": "Que signifie l'acronyme HTTP ?",
+            "options": [
+                "HyperText Transfer Protocol",
+                "HyperText Transmission Protocol",
+                "Hyperlink Transfer Protocol",
+                "Hyperlink Text Transfer Protocol"
+            ],
+            "answer": "HyperText Transfer Protocol"
+        },
+        {
+            "question": "Quel port par défaut utilise le protocole HTTP ?",
+            "options": [
+                "80",
+                "21",
+                "443",
+                "53"
+            ],
+            "answer": "80"
+        },
+        {
+            "question": "Quel code de statut HTTP indique que la page n'a pas été trouvée ?",
+            "options": [
+                "404 Not Found",
+                "200 OK",
+                "500 Internal Server Error",
+                "301 Moved Permanently"
+            ],
+            "answer": "404 Not Found"
+        },
+        {
+            "question": "Quel protocole est principalement utilisé pour sécuriser les communications HTTP ?",
+            "options": [
+                "SSL/TLS",
+                "SSH",
+                "IPsec",
+                "FTP"
+            ],
+            "answer": "SSL/TLS"
+        },
+        {
+            "question": "Que signifie l'acronyme CDN ?",
+            "options": [
+                "Content Delivery Network",
+                "Central Data Node",
+                "Customer Data Network",
+                "Content Data Network"
+            ],
+            "answer": "Content Delivery Network"
+        },
+        {
+            "question": "Quel protocole utilise le port 22 par défaut ?",
+            "options": [
+                "SSH",
+                "FTP",
+                "SMTP",
+                "DNS"
+            ],
+            "answer": "SSH"
+        },
+        {
+            "question": "Quel protocole est utilisé pour l’échange de routes entre les systèmes autonomes sur Internet ?",
+            "options": [
+                "BGP",
+                "OSPF",
+                "RIP",
+                "IGMP"
+            ],
+            "answer": "BGP"
+        },
+        {
+            "question": "Parmi ces plages, laquelle est réservée aux adresses IPv4 privées ?",
+            "options": [
+                "10.0.0.0/8",
+                "192.0.2.0/24",
+                "203.0.113.0/24",
+                "198.51.100.0/24"
+            ],
+            "answer": "10.0.0.0/8"
+        },
+        {
+            "question": "Que signifie l'acronyme ISP ?",
+            "options": [
+                "Internet Service Provider",
+                "International Standards for Protocols",
+                "Internet System Protocol",
+                "Internal Server Platform"
+            ],
+            "answer": "Internet Service Provider"
+        }
+    ],
+    "Le Web": [
+        {
+            "question": "Qui a inventé le World Wide Web et en quelle année a-t-il publié son premier site ?",
+            "options": [
+                "Tim Berners-Lee en 1989",
+                "Ted Nelson en 1965",
+                "Vint Cerf en 1974",
+                "Marc Andreessen en 1993"
+            ],
+            "answer": "Tim Berners-Lee en 1989"
+        },
+        {
+            "question": "Quelle architecture est à la base du fonctionnement du Web ?",
+            "options": [
+                "Pair à pair",
+                "Client-serveur",
+                "Monolithique",
+                "Hybride"
+            ],
+            "answer": "Client-serveur"
+        },
+        {
+            "question": "Qu'est-ce qu'une API REST ?",
+            "options": [
+                "Une interface web basée sur HTTP pour manipuler des ressources",
+                "Un protocole de messagerie instantanée",
+                "Un serveur de fichiers",
+                "Un langage de balisage"
+            ],
+            "answer": "Une interface web basée sur HTTP pour manipuler des ressources"
+        },
+        {
+            "question": "Quel format d'échange est plus léger et couramment utilisé par les API web ?",
+            "options": [
+                "JSON",
+                "XML",
+                "CSV",
+                "YAML"
+            ],
+            "answer": "JSON"
+        },
+        {
+            "question": "Quel sélecteur CSS cible toutes les balises <p> ?",
+            "options": [
+                "p",
+                "#p",
+                ".p",
+                "*"
+            ],
+            "answer": "p"
+        },
+        {
+            "question": "Quelle propriété CSS définit l'espace entre le contenu et la bordure d'un élément ?",
+            "options": [
+                "margin",
+                "padding",
+                "border",
+                "width"
+            ],
+            "answer": "padding"
+        },
+        {
+            "question": "Quel protocole permet de sécuriser les échanges HTTP ?",
+            "options": [
+                "SSL/TLS",
+                "SSH",
+                "IPsec",
+                "FTP"
+            ],
+            "answer": "SSL/TLS"
+        },
+        {
+            "question": "Que signifie DOM en JavaScript ?",
+            "options": [
+                "Document Object Model",
+                "Data Object Model",
+                "Digital Object Manager",
+                "Domain Object Model"
+            ],
+            "answer": "Document Object Model"
+        },
+        {
+            "question": "Qui a créé JavaScript et en quelle année ?",
+            "options": [
+                "Brendan Eich en 1995",
+                "Tim Berners-Lee en 1989",
+                "Guido van Rossum en 1991",
+                "James Gosling en 1995"
+            ],
+            "answer": "Brendan Eich en 1995"
+        },
+        {
+            "question": "Qu'est-ce que AJAX ?",
+            "options": [
+                "Asynchronous JavaScript and XML",
+                "Automated JSON and XML",
+                "All JavaScript Applications",
+                "Asynchronous Java and XHTML"
+            ],
+            "answer": "Asynchronous JavaScript and XML"
+        },
+        {
+            "question": "Quel élément HTML permet d'inclure une feuille CSS externe ?",
+            "options": [
+                "<link>",
+                "<style>",
+                "<script>",
+                "<css>"
+            ],
+            "answer": "<link>"
+        },
+        {
+            "question": "Quel mot-clé CSS est utilisé pour créer un conteneur flexbox ?",
+            "options": [
+                "display:flex",
+                "display:grid",
+                "float:left",
+                "position:flex"
+            ],
+            "answer": "display:flex"
+        },
+        {
+            "question": "Quel protocole permet une communication bidirectionnelle persistante entre client et serveur ?",
+            "options": [
+                "WebSocket",
+                "HTTP",
+                "FTP",
+                "SMTP"
+            ],
+            "answer": "WebSocket"
+        },
+        {
+            "question": "Quel est le rôle principal des Service Workers dans une PWA ?",
+            "options": [
+                "Gérer le cache et l’accès hors ligne",
+                "Transférer les fichiers",
+                "Exécuter le rendu du serveur",
+                "Collecter des analytics"
+            ],
+            "answer": "Gérer le cache et l’accès hors ligne"
+        },
+        {
+            "question": "Que signifie W3C ?",
+            "options": [
+                "World Wide Web Consortium",
+                "Web 3.0 Consortium",
+                "Wireless Web Committee",
+                "World Web Company"
+            ],
+            "answer": "World Wide Web Consortium"
+        }
+    ],
+    "Les réseaux sociaux": [
+        {
+            "question": "En quelle année Facebook a-t-il ouvert son inscription à tous les utilisateurs majeurs ?",
+            "options": [
+                "2004",
+                "2005",
+                "2006",
+                "2007"
+            ],
+            "answer": "2006"
+        },
+        {
+            "question": "Quelle était la limite initiale de caractères sur Twitter ?",
+            "options": [
+                "100",
+                "140",
+                "160",
+                "280"
+            ],
+            "answer": "140"
+        },
+        {
+            "question": "Qu'est-ce qu'une bulle de filtre ?",
+            "options": [
+                "Un algorithme qui montre du contenu aligné avec les préférences de l'utilisateur",
+                "Une fonctionnalité de protection des données",
+                "Un type de message sponsorisé",
+                "Une limite de durée pour les vidéos"
+            ],
+            "answer": "Un algorithme qui montre du contenu aligné avec les préférences de l'utilisateur"
+        },
+        {
+            "question": "Quel règlement européen protège les données personnelles des utilisateurs ?",
+            "options": [
+                "DMCA",
+                "COPPA",
+                "RGPD",
+                "HIPAA"
+            ],
+            "answer": "RGPD"
+        },
+        {
+            "question": "Quelle est la principale source de revenus des réseaux sociaux gratuits ?",
+            "options": [
+                "Abonnements payants",
+                "Publicité ciblée",
+                "Vente de matériel",
+                "Dons"
+            ],
+            "answer": "Publicité ciblée"
+        },
+        {
+            "question": "Quel réseau social professionnel a été lancé en mai 2003 ?",
+            "options": [
+                "LinkedIn",
+                "Viadeo",
+                "Xing",
+                "Monster"
+            ],
+            "answer": "LinkedIn"
+        },
+        {
+            "question": "En quelle année TikTok a-t-il été lancé au niveau international ?",
+            "options": [
+                "2016",
+                "2017",
+                "2018",
+                "2019"
+            ],
+            "answer": "2017"
+        },
+        {
+            "question": "Quelle fonctionnalité Instagram, lancée en 2020, permet de publier de courtes vidéos musicales ?",
+            "options": [
+                "Reels",
+                "Stories",
+                "Shorts",
+                "Clips"
+            ],
+            "answer": "Reels"
+        },
+        {
+            "question": "Quel réseau social dédié au live gaming appartient à Amazon ?",
+            "options": [
+                "Twitch",
+                "Mixer",
+                "DLive",
+                "Trovo"
+            ],
+            "answer": "Twitch"
+        },
+        {
+            "question": "Que signifie 'DM' dans le contexte des réseaux sociaux ?",
+            "options": [
+                "Direct Message",
+                "Data Management",
+                "Direct Media",
+                "Download Message"
+            ],
+            "answer": "Direct Message"
+        },
+        {
+            "question": "Quel algorithme Facebook utilisait-il à l'origine pour classer le fil d'actualité ?",
+            "options": [
+                "EdgeRank",
+                "PageRank",
+                "NewsRank",
+                "SociaRank"
+            ],
+            "answer": "EdgeRank"
+        },
+        {
+            "question": "Quel réseau social basé sur l’image permet d’épingler du contenu sur des 'tableaux' ?",
+            "options": [
+                "Pinterest",
+                "Instagram",
+                "Tumblr",
+                "Flickr"
+            ],
+            "answer": "Pinterest"
+        },
+        {
+            "question": "Que signifie l’acronyme 'UGC' dans le marketing digital ?",
+            "options": [
+                "User Generated Content",
+                "Unified Graphics Container",
+                "User Guide Content",
+                "Uniform Geo Code"
+            ],
+            "answer": "User Generated Content"
+        },
+        {
+            "question": "Quel réseau social lancé par Google en 2011 a fermé ses portes en 2019 ?",
+            "options": [
+                "Google+",
+                "Orkut",
+                "Buzz",
+                "Wave"
+            ],
+            "answer": "Google+"
+        },
+        {
+            "question": "Quel site, lancé en 2005, fonctionne par des communautés appelées 'subreddits' ?",
+            "options": [
+                "Reddit",
+                "Digg",
+                "Tumblr",
+                "Voat"
+            ],
+            "answer": "Reddit"
+        }
+    ],
+    "Données structurées et traitement": [
+        {
+            "question": "Qui a proposé le modèle relationnel pour les bases de données et en quelle année ?",
+            "options": [
+                "Edgar F. Codd en 1970",
+                "Donald Chamberlin en 1974",
+                "Michael Stonebraker en 1985",
+                "Jim Gray en 1992"
+            ],
+            "answer": "Edgar F. Codd en 1970"
+        },
+        {
+            "question": "Quelle requête SQL sélectionne toutes les colonnes de la table utilisateurs ?",
+            "options": [
+                "SELECT utilisateurs FROM *",
+                "SELECT * FROM utilisateurs",
+                "GET * FROM utilisateurs",
+                "FETCH ALL FROM utilisateurs"
+            ],
+            "answer": "SELECT * FROM utilisateurs"
+        },
+        {
+            "question": "À quoi sert une jointure (JOIN) en SQL ?",
+            "options": [
+                "À combiner des lignes de plusieurs tables selon une condition",
+                "À chiffrer la base de données",
+                "À créer une nouvelle table vide",
+                "À dupliquer une table"
+            ],
+            "answer": "À combiner des lignes de plusieurs tables selon une condition"
+        },
+        {
+            "question": "Quel format texte est destiné au stockage de tableaux de données simples ?",
+            "options": [
+                "JSON",
+                "XML",
+                "CSV",
+                "YAML"
+            ],
+            "answer": "CSV"
+        },
+        {
+            "question": "Quel type de base NoSQL stocke les données sous forme de documents JSON ?",
+            "options": [
+                "Clé-valeur",
+                "Colonnes",
+                "Document",
+                "Graphe"
+            ],
+            "answer": "Document"
+        },
+        {
+            "question": "Quel est l'intérêt principal d'un index dans une base de données ?",
+            "options": [
+                "Accélérer les opérations de recherche",
+                "Augmenter la taille des données",
+                "Crypter les données",
+                "Modifier la structure de la table"
+            ],
+            "answer": "Accélérer les opérations de recherche"
+        },
+        {
+            "question": "Quelle propriété ACID garantit que toutes les opérations d’une transaction sont atomiques ?",
+            "options": [
+                "Atomicité",
+                "Durabilité",
+                "Isolation",
+                "Cohérence"
+            ],
+            "answer": "Atomicité"
+        },
+        {
+            "question": "Quel théorème décrit le compromis entre Cohérence, Disponibilité et Tolérance au Partitionnement dans un système distribué ?",
+            "options": [
+                "Théorème CAP",
+                "Théorème ACID",
+                "Théorème BASE",
+                "Théorème FLP"
+            ],
+            "answer": "Théorème CAP"
+        },
+        {
+            "question": "Quelle opération MapReduce réalise la phase de regroupement des paires clé-valeur ?",
+            "options": [
+                "Shuffle",
+                "Map",
+                "Reduce",
+                "Sort"
+            ],
+            "answer": "Shuffle"
+        },
+        {
+            "question": "Dans un pipeline ETL, que signifie ETL ?",
+            "options": [
+                "Extract, Transform, Load",
+                "Encrypt, Transfer, Log",
+                "Evaluate, Test, Launch",
+                "Encode, Transmit, Link"
+            ],
+            "answer": "Extract, Transform, Load"
+        },
+        {
+            "question": "Quelle forme normale élimine les dépendances partielles entre colonnes ?",
+            "options": [
+                "Deuxième forme normale (2NF)",
+                "Première forme normale (1NF)",
+                "Troisième forme normale (3NF)",
+                "Forme normale de Boyce-Codd (BCNF)"
+            ],
+            "answer": "Deuxième forme normale (2NF)"
+        },
+        {
+            "question": "Quel outil utilise XPath pour interroger des documents XML ?",
+            "options": [
+                "XPath",
+                "JSONPath",
+                "SQL",
+                "Regex"
+            ],
+            "answer": "XPath"
+        },
+        {
+            "question": "Quelle technologie est conçue pour stocker des données analytiques en colonnes plutôt qu’en lignes ?",
+            "options": [
+                "Base de données orientée colonnes",
+                "Base de données relationnelle",
+                "Base NoSQL clé-valeur",
+                "Fichier plat"
+            ],
+            "answer": "Base de données orientée colonnes"
+        },
+        {
+            "question": "Quelle différence principale distingue un Data Warehouse d’un Data Lake ?",
+            "options": [
+                "Schéma avant écriture vs schéma après écriture",
+                "Pas de structure vs structure fixe",
+                "Temps réel vs batch",
+                "SQL vs NoSQL"
+            ],
+            "answer": "Schéma avant écriture vs schéma après écriture"
+        },
+        {
+            "question": "Quel est l’avantage de JSON par rapport à XML pour les échanges web ?",
+            "options": [
+                "Plus léger et plus facile à parser",
+                "Support natif des attributs",
+                "Meilleure validation de schéma",
+                "Multiples espaces de noms"
+            ],
+            "answer": "Plus léger et plus facile à parser"
+        }
+    ],
+    "Localisation, cartographie et mobilité": [
+        {
+            "question": "Quel système a été déployé par le DoD américain en 1978 pour la géolocalisation ?",
+            "options": [
+                "GLONASS",
+                "Galileo",
+                "GPS",
+                "Beidou"
+            ],
+            "answer": "GPS"
+        },
+        {
+            "question": "Quel principe technique permet à un récepteur GPS de déterminer sa position ?",
+            "options": [
+                "Trilatération par satellite",
+                "Triangulation radio-terrestre",
+                "Mesure Doppler",
+                "Balayage radar"
+            ],
+            "answer": "Trilatération par satellite"
+        },
+        {
+            "question": "Quel projet collaboratif permet à des volontaires de cartographier le monde ?",
+            "options": [
+                "MapQuest",
+                "OpenStreetMap",
+                "Google Maps",
+                "Waze"
+            ],
+            "answer": "OpenStreetMap"
+        },
+        {
+            "question": "Qu'est-ce que GeoJSON ?",
+            "options": [
+                "Un protocole de communication IoT",
+                "Un format de données géospatiales basé sur JSON",
+                "Une API de cartographie",
+                "Un système de positionnement indoor"
+            ],
+            "answer": "Un format de données géospatiales basé sur JSON"
+        },
+        {
+            "question": "Qu'est-ce que le géofencing ?",
+            "options": [
+                "La création de zones géographiques virtuelles pour déclencher des actions",
+                "Le placement de capteurs GPS dans des véhicules",
+                "La modélisation 3D de terrains",
+                "Une technique de triangulation améliorée"
+            ],
+            "answer": "La création de zones géographiques virtuelles pour déclencher des actions"
+        },
+        {
+            "question": "Quel système européen de navigation par satellite est nommé d'après un scientifique ?",
+            "options": [
+                "GLONASS",
+                "Galileo",
+                "NavIC",
+                "Beidou"
+            ],
+            "answer": "Galileo"
+        },
+        {
+            "question": "Quel est l’équivalent russe du GPS ?",
+            "options": [
+                "BeiDou",
+                "GLONASS",
+                "NavIC",
+                "Galileo"
+            ],
+            "answer": "GLONASS"
+        },
+        {
+            "question": "Que signifie SIG ?",
+            "options": [
+                "Système d’Information Géographique",
+                "Service d’Information Global",
+                "Système d’Informations Générales",
+                "Service d’Indexation Géographique"
+            ],
+            "answer": "Système d’Information Géographique"
+        },
+        {
+            "question": "Quel format raster est souvent utilisé pour les images satellites ?",
+            "options": [
+                "GeoTIFF",
+                "Shapefile",
+                "KML",
+                "CSV"
+            ],
+            "answer": "GeoTIFF"
+        },
+        {
+            "question": "Quel format vectoriel est utilisé par les logiciels SIG pour stocker des entités géographiques ?",
+            "options": [
+                "GeoJSON",
+                "Shapefile",
+                "KML",
+                "GPX"
+            ],
+            "answer": "Shapefile"
+        },
+        {
+            "question": "Quel protocole OGC permet l’accès aux cartes via HTTP ?",
+            "options": [
+                "WMS",
+                "WFS",
+                "WCS",
+                "WMTS"
+            ],
+            "answer": "WMS"
+        },
+        {
+            "question": "Quel type de projection conserve les surfaces ?",
+            "options": [
+                "Conforme",
+                "Équivalente",
+                "Équidistante",
+                "Azimutale"
+            ],
+            "answer": "Équivalente"
+        },
+        {
+            "question": "Quel terme désigne la cartographie dynamique sur un site web ?",
+            "options": [
+                "Cartographie statique",
+                "Webmapping",
+                "Télédétection",
+                "Géomarketing"
+            ],
+            "answer": "Webmapping"
+        },
+        {
+            "question": "Quel outil permet d’analyser le trafic routier en temps réel ?",
+            "options": [
+                "Google Maps",
+                "QGIS",
+                "ArcGIS",
+                "GRASS GIS"
+            ],
+            "answer": "Google Maps"
+        },
+        {
+            "question": "Quel format de fichier est utilisé pour transférer des maillages 3D sur le web ?",
+            "options": [
+                "glTF",
+                "OBJ",
+                "STL",
+                "FBX"
+            ],
+            "answer": "glTF"
+        }
+    ],
+    "Informatique embarquée et objets connectés": [
+        {
+            "question": "Quelle mission Apollo a utilisé l’un des premiers calculateurs embarqués pour le module lunaire ?",
+            "options": [
+                "Apollo 7",
+                "Apollo 8",
+                "Apollo 11",
+                "Apollo 13"
+            ],
+            "answer": "Apollo 11"
+        },
+        {
+            "question": "Qui a popularisé l'expression « Internet des objets » et en quelle année ?",
+            "options": [
+                "Marc Weiser en 1991",
+                "Kevin Ashton en 1999",
+                "Vint Cerf en 2005",
+                "Tim Berners-Lee en 1989"
+            ],
+            "answer": "Kevin Ashton en 1999"
+        },
+        {
+            "question": "À quoi sert MQTT dans l'IoT ?",
+            "options": [
+                "Un protocole de messagerie léger basé sur le modèle pub/sub",
+                "Un système de fichiers distribué",
+                "Un langage de programmation pour objets",
+                "Un format d'image"
+            ],
+            "answer": "Un protocole de messagerie léger basé sur le modèle pub/sub"
+        },
+        {
+            "question": "Quel protocole conçu pour l’IoT est une alternative légère à HTTP ?",
+            "options": [
+                "AMQP",
+                "FTP",
+                "CoAP",
+                "SMTP"
+            ],
+            "answer": "CoAP"
+        },
+        {
+            "question": "Que désigne « edge computing » ?",
+            "options": [
+                "Le traitement des données à la périphérie du réseau plutôt que dans le cloud",
+                "Le chiffrement de périphériques IoT",
+                "La virtualisation de serveurs",
+                "La connexion de réseaux maillés"
+            ],
+            "answer": "Le traitement des données à la périphérie du réseau plutôt que dans le cloud"
+        },
+        {
+            "question": "Citez une mesure de sécurité recommandée pour un objet connecté.",
+            "options": [
+                "Utiliser un chiffrement des communications",
+                "Stocker les mots de passe en clair",
+                "Désactiver toute authentification",
+                "Changer régulièrement de système d'exploitation"
+            ],
+            "answer": "Utiliser un chiffrement des communications"
+        },
+        {
+            "question": "Quel bus série est couramment utilisé pour la communication entre microcontrôleurs et capteurs ?",
+            "options": [
+                "I2C",
+                "SPI",
+                "UART",
+                "CAN"
+            ],
+            "answer": "I2C"
+        },
+        {
+            "question": "Quel protocole de communication longue portée et basse consommation est adapté à l’IoT ?",
+            "options": [
+                "Zigbee",
+                "LoRaWAN",
+                "NB-IoT",
+                "Bluetooth Low Energy"
+            ],
+            "answer": "LoRaWAN"
+        },
+        {
+            "question": "Quel composant convertit un signal analogique en numérique dans un système embarqué ?",
+            "options": [
+                "DAC",
+                "ADC",
+                "PWM",
+                "UART"
+            ],
+            "answer": "ADC"
+        },
+        {
+            "question": "Quel protocole sans fil courte portée est le plus utilisé pour l’IoT grand public ?",
+            "options": [
+                "Wi-Fi",
+                "Bluetooth Classic",
+                "Bluetooth Low Energy",
+                "NFC"
+            ],
+            "answer": "Bluetooth Low Energy"
+        },
+        {
+            "question": "Que signifie RTOS ?",
+            "options": [
+                "Real-Time Operating System",
+                "Remote Transfer of Sensor",
+                "Reliable Tasking OS",
+                "Rapid Throughput OS"
+            ],
+            "answer": "Real-Time Operating System"
+        },
+        {
+            "question": "Quel microcontrôleur AVR 8 bits est populaire dans l’embarqué amateur ?",
+            "options": [
+                "ATmega8",
+                "ATmega328",
+                "PIC16F877",
+                "STM32F103"
+            ],
+            "answer": "ATmega328"
+        },
+        {
+            "question": "Quelle technique permet de réduire la consommation en mettant le microcontrôleur en mode veille ?",
+            "options": [
+                "Overclocking",
+                "Sleep Mode",
+                "DMA",
+                "Polling continu"
+            ],
+            "answer": "Sleep Mode"
+        },
+        {
+            "question": "Quel protocole série asynchrone est souvent appelé RS-232 ?",
+            "options": [
+                "I2C",
+                "SPI",
+                "UART",
+                "CAN"
+            ],
+            "answer": "UART"
+        },
+        {
+            "question": "Quel composant régule la tension et fournit un voltage stable aux circuits embarqués ?",
+            "options": [
+                "MOSFET",
+                "LDO",
+                "Transistor",
+                "Convertisseur numérique-analogique"
+            ],
+            "answer": "LDO"
+        }
+    ],
+    "Photographie numérique": [
+        {
+            "question": "Quel type de capteur, inventé en 1969, a révolutionné la photographie numérique ?",
+            "options": [
+                "CMOS",
+                "CCD",
+                "BSI",
+                "Foveon"
+            ],
+            "answer": "CCD"
+        },
+        {
+            "question": "Quels sont les trois paramètres du triangle d'exposition en photographie ?",
+            "options": [
+                "Ouverture, vitesse d'obturation, sensibilité ISO",
+                "Contraste, saturation, luminosité",
+                "Balance des blancs, résolution, format",
+                "Ouverture, balance des blancs, taille du capteur"
+            ],
+            "answer": "Ouverture, vitesse d'obturation, sensibilité ISO"
+        },
+        {
+            "question": "Qu'est-ce que le format RAW ?",
+            "options": [
+                "Un format d'image compressé avec perte",
+                "Un format contenant les données brutes issues du capteur",
+                "Un format destiné aux vidéos",
+                "Un protocole de transfert de fichiers"
+            ],
+            "answer": "Un format contenant les données brutes issues du capteur"
+        },
+        {
+            "question": "Quelle est la principale différence entre RAW et JPEG ?",
+            "options": [
+                "RAW est sans perte et non traité, JPEG est compressé avec perte et traité",
+                "RAW est un format vidéo, JPEG est un format audio",
+                "RAW est plus léger que JPEG",
+                "RAW est un format de texte"
+            ],
+            "answer": "RAW est sans perte et non traité, JPEG est compressé avec perte et traité"
+        },
+        {
+            "question": "Quelle est la différence entre un photosite et un pixel ?",
+            "options": [
+                "Le photosite capte la lumière, le pixel est la représentation finale pour l'affichage",
+                "Le photosite est logiciel, le pixel est matériel",
+                "Le pixel capte la lumière, le photosite est le point d'affichage",
+                "Il n'y a aucune différence"
+            ],
+            "answer": "Le photosite capte la lumière, le pixel est la représentation finale pour l'affichage"
+        },
+        {
+            "question": "Quel format d'image propose une compression sans perte ?",
+            "options": [
+                "JPEG",
+                "GIF",
+                "TIFF",
+                "BMP"
+            ],
+            "answer": "TIFF"
+        },
+        {
+            "question": "Qu'est-ce que le bruit numérique en photographie ?",
+            "options": [
+                "Une variation aléatoire de luminosité et de couleur",
+                "Une pixellisation due au recadrage",
+                "Un artefact de compression JPEG",
+                "Un effet de flou"
+            ],
+            "answer": "Une variation aléatoire de luminosité et de couleur"
+        },
+        {
+            "question": "Que montre l'histogramme d'une photo ?",
+            "options": [
+                "La répartition des tons clairs et foncés",
+                "Le nombre de pixels nets",
+                "La vitesse d'obturation utilisée",
+                "La distance hyperfocale"
+            ],
+            "answer": "La répartition des tons clairs et foncés"
+        },
+        {
+            "question": "Qu'est-ce que la profondeur de champ ?",
+            "options": [
+                "La zone nette devant et derrière le point de mise au point",
+                "La distance minimale de mise au point",
+                "Un effet de flou artistique",
+                "La capacité d'agrandissement"
+            ],
+            "answer": "La zone nette devant et derrière le point de mise au point"
+        },
+        {
+            "question": "Quel format brut alternatif, proposé par Adobe, est utilisé en photographie numérique ?",
+            "options": [
+                "NEF",
+                "ARW",
+                "DNG",
+                "RAW"
+            ],
+            "answer": "DNG"
+        },
+        {
+            "question": "Quel réglage permet d’augmenter la sensibilité du capteur en basse lumière ?",
+            "options": [
+                "Ouverture",
+                "ISO",
+                "Vitesse d'obturation",
+                "Balance des blancs"
+            ],
+            "answer": "ISO"
+        },
+        {
+            "question": "Qu'est-ce que le bracketing en photographie ?",
+            "options": [
+                "Réaliser plusieurs prises avec des expositions différentes",
+                "Appliquer un filtre numérique",
+                "Recadrer plusieurs fois",
+                "Corriger la distorsion"
+            ],
+            "answer": "Réaliser plusieurs prises avec des expositions différentes"
+        },
+        {
+            "question": "Quelle technique réduit le flou de bougé dû au mouvement du photographe ?",
+            "options": [
+                "Augmenter la vitesse d'obturation",
+                "Augmenter l'ISO",
+                "Utiliser la stabilisation optique",
+                "Réduire l'ouverture"
+            ],
+            "answer": "Utiliser la stabilisation optique"
+        },
+        {
+            "question": "Quel composant optique ajuste la quantité de lumière entrant dans l'objectif ?",
+            "options": [
+                "Diaphragme",
+                "Obturateur",
+                "Capteur",
+                "Prisme"
+            ],
+            "answer": "Diaphragme"
+        },
+        {
+            "question": "Quel impact un grand nombre de mégapixels a-t-il sur les fichiers photo ?",
+            "options": [
+                "Des fichiers plus lourds",
+                "Moins de bruit",
+                "La même taille de fichier",
+                "Des fichiers plus légers"
+            ],
+            "answer": "Des fichiers plus lourds"
+        }
+    ]
+}
